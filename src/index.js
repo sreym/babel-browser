@@ -1,7 +1,10 @@
 import * as Babel from './babel';
 
+var jsxControlStatements = require('jsx-control-statements/babel');
+
 let transformOptions = {
-  presets: ['es2015', 'react', 'stage-0']
+  presets: ['es2015', 'react', 'stage-0'],
+  plugins: [jsxControlStatements]
 };
 
 let runCode = function (code, opts = {}) {

@@ -99,7 +99,8 @@
     "json-loader": "^0.5.4",
     "react": "^0.14.3",
     "webpack": "^1.12.9",
-    "webpack-stream": "^2.3.0"
+    "webpack-stream": "^2.3.0",
+    "jsx-control-statements": "^2.0.3"
   },
   "keywords": [
     "babel",
@@ -113,5 +114,5 @@
   "bugs": {
     "url": "https://github.com/Daniel15/babel-standalone/issues"
   },
-  "homepage": "https://github.com/Daniel15/babel-standalone#readme"
+  "homepage": "https://github.com/Daniel15/babel-standalone#readme",
 }

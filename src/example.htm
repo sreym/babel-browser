@@ -7,6 +7,17 @@
   <script type="text/babel">
     let a = 10;
     alert(a);
+
+    var HelloMessage = React.createClass({
+      render: function() {
+        return 
+          <If condition={this.props.condition === 'blah'}>
+            <span>IfBlock</span>
+          <Else />
+            <span>ElseBlock</span>
+          </If>;
+      }
+    });
   </script>
 </head>
 <body>  
