@@ -6,7 +6,7 @@ var uglify = require('gulp-uglify');
 
 gulp.task('default', ['build']);
 gulp.task('build', function() {
-  return gulp.src('src/index.js')
+  return gulp.src('src/babel-browser.js')
     .pipe(webpackStream({
       module: {
         loaders: [

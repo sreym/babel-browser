@@ -1,11 +1,11 @@
 {
-  "name": "babel-standalone",
+  "name": "babel-browser",
   "version": "1.0.0",
   "description": "Standalone build of Babel for use in non-Node.js environments. Similar to the (now deprecacted) babel-browser",
-  "main": "babel.js",
+  "main": "babel-browser.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Daniel15/babel-standalone.git"
+    "url": "git+https://github.com/sreym/babel-browser.git"
   },
   "devDependencies": {
     "babel-core": "^6.3.13",
@@ -112,7 +112,7 @@
   "author": "Daniel Lo Nigro <daniel@dan.cx> (http://dan.cx/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Daniel15/babel-standalone/issues"
+    "url": "https://github.com/sreym/babel-browser/issues"
   },
-  "homepage": "https://github.com/Daniel15/babel-standalone#readme",
+  "homepage": "https://github.com/sreym/babel-browser#readme"
 }
