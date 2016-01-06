@@ -32,7 +32,7 @@ gulp.task('build', function() {
         net: 'empty'
       },
       output: {
-        filename: 'babel.js',
+        filename: 'babel-browser.js',
         library: 'Babel',
         libraryTarget: 'umd',
       },

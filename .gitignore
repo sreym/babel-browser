@@ -1,5 +1,5 @@
-babel.js
-babel.min.js
+babel-browser.js
+babel-browser.min.js
 
 # Logs
 logs
