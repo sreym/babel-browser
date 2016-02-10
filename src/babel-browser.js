@@ -8,8 +8,8 @@ let transformOptions = {
 };
 
 let runCode = function (code, opts = {}) {
-  opts.sourceMaps = "inline";
-  return new Function(Babel.transform(code, opts).code)();
+  let resCode = Babel.transform(code, opts).code
+  return eval(resCode);
 };
 
 /**
@@ -83,12 +83,12 @@ function runScripts() {
 
   var _scripts = global.document.getElementsByTagName("script");
 
-  for (var i = 0; i < _scripts.length; ++i) {
+  for (let i = 0; i < _scripts.length; ++i) {
     var _script = _scripts[i];
     if (types.indexOf(_script.type) >= 0) scripts.push(_script);
   }
 
-  for (i in scripts) {
+  for (let i in scripts) {
     run(scripts[i], i);
   }
 
@@ -101,4 +101,8 @@ if (global.addEventListener) {
   global.attachEvent("onload", runScripts);
 }
 
-export {Babel as default, transformOptions as options};
+function transform(source) {
+  return Babel.transform(source, transformOptions).code;  
+}
+
+export {Babel as default, transformOptions as options, transform};

@@ -3,6 +3,7 @@ var rename = require('gulp-rename');
 var webpack = require('webpack');
 var webpackStream = require('webpack-stream');
 var uglify = require('gulp-uglify');
+var convertEncoding = require('gulp-convert-encoding');
 
 gulp.task('default', ['build']);
 gulp.task('build', function() {
@@ -45,10 +46,11 @@ gulp.task('build', function() {
       ]
     }))
     // Output unminified version
+    .pipe(convertEncoding({to: 'ascii'}))
     .pipe(gulp.dest('.'))
 
     // Output minified version
     .pipe(uglify())
-    .pipe(rename({ extname: '.min.js' }))
+    .pipe(rename({ extname: '.min.js' }))   
     .pipe(gulp.dest('.'));
 });
