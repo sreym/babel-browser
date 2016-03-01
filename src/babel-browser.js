@@ -1,15 +1,17 @@
 import * as Babel from './index';
 
 var jsxControlStatements = require('jsx-control-statements/babel');
-var transformAssignTopLevelToGlobal = require('babel-plugin-transform-assign-top-level-to-global';
+var transformAssignTopLevelToGlobal = require('babel-plugin-transform-assign-top-level-to-global');
+var asyncToGenerator = require('babel-plugin-transform-async-to-generator');
 
 let transformOptions = {
   presets: ['es2015', 'react', 'stage-0'],
-  plugins: [jsxControlStatements, transformAssignTopLevelToGlobal]
+  plugins: [jsxControlStatements, transformAssignTopLevelToGlobal, asyncToGenerator]
 };
 
 let runCode = function (code, opts = {}) {
-  let resCode = Babel.transform(code, opts).code
+  let Babel = global.Babel;
+  let resCode = Babel.default.transform(code, opts).code;  
   return eval(resCode);
 };
 
@@ -103,7 +105,7 @@ if (global.addEventListener) {
 }
 
 function transform(source) {
-  return Babel.transform(source, transformOptions).code;  
+  return Babel.transform(source, global.Babel.options).code;  
 }
 
 export {Babel as default, transformOptions as options, transform};

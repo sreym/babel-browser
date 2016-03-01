@@ -1,5 +1,5 @@
 import * as Babel from 'babel-core';
-
+import "babel-polyfill";
 /**
  * Parses plugin names and presets from the specified options.
  */

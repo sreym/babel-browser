@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <script type="text/javascript" src="../babel-browser.js"></script>
+  </head>
+  <body>
+    <div id="result"></div>
+    <script type="text/babel">
+      function retPromise() {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve("hello");
+          }, 1000);
+        });
+      }
+      async function asyncFunction() {
+        let v = await retPromise();
+        alert(v);
+      }
+      
+      asyncFunction();
+    </script>
+  </body>
+</html>
