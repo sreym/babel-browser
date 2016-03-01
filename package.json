@@ -25,6 +25,7 @@
     "babel-plugin-syntax-jsx": "^6.3.13",
     "babel-plugin-syntax-object-rest-spread": "^6.3.13",
     "babel-plugin-syntax-trailing-function-commas": "^6.3.13",
+    "babel-plugin-transform-assign-top-level-to-global": "git+https://github.com/kittens/babel-plugin-transform-assign-top-level-to-global.git",
     "babel-plugin-transform-async-functions": "^6.3.13",
     "babel-plugin-transform-async-to-generator": "^6.3.13",
     "babel-plugin-transform-async-to-module-method": "^6.3.13",

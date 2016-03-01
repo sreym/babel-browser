@@ -1,10 +1,11 @@
 import * as Babel from './index';
 
 var jsxControlStatements = require('jsx-control-statements/babel');
+var transformAssignTopLevelToGlobal = require('babel-plugin-transform-assign-top-level-to-global';
 
 let transformOptions = {
   presets: ['es2015', 'react', 'stage-0'],
-  plugins: [jsxControlStatements]
+  plugins: [jsxControlStatements, transformAssignTopLevelToGlobal]
 };
 
 let runCode = function (code, opts = {}) {
